@@ -1,6 +1,6 @@
-# AI Portfolio
+# Portfolio
 
-A modern, interactive portfolio website of Pradip Bakutra, showcasing projects, skills, and professional experience as a Frontend Developer. Built with React, TypeScript, Vite, Tailwind CSS, and advanced 3D visualizations using Three.js.
+A portfolio website of Pradip Bakutra, showcasing projects, skills, and professional experience as a Frontend Developer. Built with React, TypeScript, Vite, Tailwind CSS, and advanced 3D visualizations using Three.js.
 
 ## Table of Contents
 
@@ -26,11 +26,6 @@ A modern, interactive portfolio website of Pradip Bakutra, showcasing projects, 
 - **Dark Mode**: Fully themeable with dark/light support.
 - **Custom Components**: Extensive use of reusable UI components (buttons, cards, forms, etc.).
 - **404 Page**: Custom not-found page for invalid routes.
-
-## Demo
-
-> **Live Demo:** _[Add your deployment link here]_  
-> **Screenshot:** > ![Portfolio Screenshot](public/screenshot.png) <!-- Add a screenshot if available -->
 
 ## Tech Stack
 
@@ -110,27 +105,11 @@ ai-portfolio/
 
 ## Showcase
 
-### Featured Projects
-
-- **Tech Scouting Platform**: Technology research and scouting platform with advanced search, trend analysis, and data visualization. _(React.js, Redux, REST APIs)_
-- **Research Design Tool (RDT)**: Drag-and-drop tool for research design and data flow visualization. _(React.js, SQL, Ant Design)_
-- **Research Process Automation**: Automated data validation and workflow management system. _(React.js, JavaScript)_
-
 ### Skills & Certifications
 
 - **Frontend:** React.js, JavaScript, Redux, HTML/CSS
 - **Backend:** Java, MySQL
 - **Tools:** Ant Design, Git, VS Code
-- **Certifications:**
-  - Software Development (jSpider Institute, Bengaluru)
-  - React - The Complete Guide (Udemy)
-
-### Experience
-
-- **React Developer** @ Ideapdoke Technologies (2022–Present)
-  - Built and maintained React-based applications, optimized performance, and collaborated with cross-functional teams.
-- **Software Engineer** @ Ideapdoke Technologies (2021–2022)
-  - Full-stack development with JavaScript, Java, SQL, and MySQL; API design and database integration.
 
 ## Contact
 
@@ -139,9 +118,3 @@ ai-portfolio/
 - **Location:** Bengaluru, India
 - **LinkedIn:** [Pradip Bakutra](https://www.linkedin.com/in/pradip-bakutra-dev/)
 - **Resume:** [Download Resume](https://drive.google.com/file/d/1eiT4iQlPbTVRy72QFqAa-gYeBxIGia0W/view?usp=drive_link)
-
----
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
