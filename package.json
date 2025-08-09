@@ -11,6 +11,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
+    "convert:js": "node scripts/convert-to-js.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -84,8 +85,6 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.11",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
   }
 }
