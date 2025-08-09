@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { Code2, FileCode2, Palette, Repeat, Coffee, Database, Boxes, GitBranch, SquareCode, GraduationCap } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -48,48 +49,68 @@ const Skills = () => {
     },
   ];
 
+  const iconMap: Record<string, JSX.Element> = {
+    "React.js": <Code2 className="size-4" />, // Generic code icon for React
+    JavaScript: <FileCode2 className="size-4" />,
+    "HTML/CSS": <Palette className="size-4" />,
+    Redux: <Repeat className="size-4" />,
+    Java: <Coffee className="size-4" />,
+    MySQL: <Database className="size-4" />,
+    "Ant Design": <Boxes className="size-4" />,
+    Git: <GitBranch className="size-4" />,
+    "VS Code": <SquareCode className="size-4" />,
+  };
+
   return (
-    <section id="skills" className="py-20 bg-background relative">
+    <section id="skills" className="relative py-20 bg-background">
+      {/* subtle gradient backdrop */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.35]">
+        <div className="absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-gradient-primary blur-3xl" />
+      </div>
+
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
-            Skills & Expertise
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Technical{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Proficiency
-            </span>
+        <header className="text-center mb-16 animate-fade-in">
+          <Badge variant="outline" className="mb-4">Skills & Expertise</Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Technical <span className="bg-gradient-primary bg-clip-text text-transparent">Skills</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Continuous learning and mastery of modern web development
-            technologies and best practices.
+            A sleek snapshot of my core capabilities across the stack.
           </p>
-        </div>
+        </header>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {skillCategories.map((category, index) => (
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-8 mb-16">
+          {skillCategories.map((category) => (
             <Card
               key={category.title}
-              className="group hover:shadow-lg transition-all duration-300 hover:shadow-primary/20 bg-gradient-secondary border-border/50"
+              className="group relative overflow-hidden border border-border/50 bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-card/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow"
             >
+              <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-primary" />
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-6 group-hover:text-primary transition-colors">
+                <h3 className="text-lg md:text-xl font-semibold mb-6 group-hover:text-primary transition-colors">
                   {category.title}
                 </h3>
-                <div className="space-y-4">
+
+                <div className="space-y-3">
                   {category.skills.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
+                    <div
+                      key={skill.name}
+                      className="rounded-xl border border-border/50 bg-muted/20 p-3 transition-colors hover:bg-muted/30"
+                    >
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">{skill.icon}</span>
+                        <div className="flex items-center gap-3">
+                          <div className="h-8 w-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                            {iconMap[skill.name] ?? <span className="text-base">{skill.icon}</span>}
+                          </div>
                           <span className="font-medium">{skill.name}</span>
                         </div>
-                        <span className="text-sm text-muted-foreground">
+                        <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-medium">
                           {skill.level}%
                         </span>
                       </div>
-                      <Progress value={skill.level} className="h-2" />
+                      <div className="mt-2">
+                        <Progress value={skill.level} className="h-1.5" />
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -100,21 +121,19 @@ const Skills = () => {
 
         <div>
           <h3 className="text-2xl font-semibold text-center mb-8">
-            Certifications &{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Learning
-            </span>
+            Certifications <span className="bg-gradient-primary bg-clip-text text-transparent">& Learning</span>
           </h3>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {certifications.map((cert, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 hover:shadow-primary/20 bg-gradient-secondary border-border/50"
+                className="relative overflow-hidden border border-border/50 bg-card/60 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-glow"
               >
+                <div className="absolute left-0 top-0 h-full w-1 bg-gradient-primary" />
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
-                      <span className="text-2xl">🎓</span>
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-primary">
+                      <GraduationCap className="size-6" />
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold mb-1 group-hover:text-primary transition-colors">
